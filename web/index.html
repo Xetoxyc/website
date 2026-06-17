@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      // Apply the stored theme before paint (no flash) and expose the toggle.
+      (function () {
+        var r = document.documentElement;
+        try {
+          var s = localStorage.getItem("theme");
+          if (s === "light" || s === "dark") r.setAttribute("data-theme", s);
+        } catch (e) {}
+        window.toggleTheme = function () {
+          var c = r.getAttribute("data-theme") === "light" ? "light" : "dark";
+          var n = c === "light" ? "dark" : "light";
+          r.setAttribute("data-theme", n);
+          try { localStorage.setItem("theme", n); } catch (e) {}
+        };
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"><!--app-html--></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

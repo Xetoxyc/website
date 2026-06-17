@@ -1,0 +1,9 @@
+.git
+.gitignore
+README.md
+AGENT.md
+**/node_modules
+web/dist
+web/.vite-react-ssg-temp
+*.swp
+.DS_Store
