@@ -9,7 +9,7 @@ export function Footer({ lang, showGitHub }: { lang: Lang; showGitHub?: boolean 
   return (
     <footer className="border-t border-border-soft bg-bg-soft py-8 text-[0.88rem] print:hidden">
       <div className={`${wrap} flex flex-wrap items-center justify-between gap-x-6 gap-y-3`}>
-        <ul className="flex flex-wrap gap-4 list-none p-0">
+        <ul className="hidden md:flex flex-wrap gap-4 list-none p-0">
           <li><Link className={link} to={home}>{t(lang, "footer.home")}</Link></li>
           <li><Link className={link} to={cv}>{t(lang, "footer.cv")}</Link></li>
           <li><Link className={link} to="/imprint">Impressum</Link></li>

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Snake } from "./Snake";
+import { themeToggle } from "../ui";
 
 const out = "text-[#e7edf3]";
 const dim = "text-[#6b7b89]";
@@ -85,7 +86,7 @@ function shake() {
   } catch { /* no-op */ }
 }
 
-export function Terminal() {
+function Console({ fill }: { fill?: boolean }) {
   const [lines, setLines] = useState<Line[]>(BOOT);
   const [input, setInput] = useState("");
   const [history, setHistory] = useState<string[]>([]);
@@ -99,6 +100,8 @@ export function Terminal() {
   useEffect(() => {
     if (bodyRef.current) bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
   }, [lines]);
+
+  useEffect(() => { if (fill) inputRef.current?.focus(); }, [fill]);
 
   function lsOutput(args: string[]): Line[] {
     const fs = fsRef.current;
@@ -261,7 +264,7 @@ export function Terminal() {
   return (
     <>
       <div
-        className="bg-[#0a0d10] border border-border rounded-xl overflow-hidden font-mono shadow-[0_18px_40px_-24px_rgba(0,0,0,0.8)] light:shadow-[0_18px_40px_-28px_rgba(13,27,42,0.35)]"
+        className={`bg-[#0a0d10] border border-border rounded-xl overflow-hidden font-mono shadow-[0_18px_40px_-24px_rgba(0,0,0,0.8)] light:shadow-[0_18px_40px_-28px_rgba(13,27,42,0.35)] ${fill ? "flex flex-col h-full" : ""}`}
         role="group"
         aria-label="Interactive terminal. Type help."
       >
@@ -274,7 +277,7 @@ export function Terminal() {
         <div
           ref={bodyRef}
           onClick={() => inputRef.current?.focus()}
-          className="px-[1.15rem] pt-[1.1rem] pb-[1.35rem] h-[clamp(300px,40vh,420px)] overflow-y-auto text-[clamp(0.78rem,2.4vw,0.9rem)] leading-[1.7] text-[#cfe3df] cursor-text"
+          className={`px-[1.15rem] pt-[1.1rem] pb-[1.35rem] ${fill ? "flex-1 min-h-0" : "h-[clamp(300px,40vh,420px)]"} overflow-y-auto text-[clamp(0.78rem,2.4vw,0.9rem)] leading-[1.7] text-[#cfe3df] cursor-text`}
         >
           {lines.map((l) => (
             <div key={l.id} className="whitespace-pre-wrap break-words">{l.node}</div>
@@ -297,6 +300,47 @@ export function Terminal() {
         </div>
       </div>
       {snakeOpen && <Snake onExit={() => { setSnakeOpen(false); inputRef.current?.focus(); }} />}
+    </>
+  );
+}
+
+// Inline console on desktop; an "open console" button + fullscreen overlay on mobile.
+export function Terminal() {
+  const [openFs, setOpenFs] = useState(false);
+
+  useEffect(() => {
+    if (!openFs) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = prev; };
+  }, [openFs]);
+
+  return (
+    <>
+      <div className="hidden md:block">
+        <Console />
+      </div>
+
+      <button
+        type="button"
+        onClick={() => setOpenFs(true)}
+        className="md:hidden w-full flex items-center gap-2 bg-[#0a0d10] border border-border rounded-xl px-4 py-4 font-mono text-text-soft hover:border-accent text-left"
+      >
+        <span className="text-accent">$</span> open console
+        <span className="ml-auto text-text-mute text-[0.8rem]">tap to run ▸</span>
+      </button>
+
+      {openFs && (
+        <div className="md:hidden fixed inset-0 z-[80] bg-bg flex flex-col">
+          <div className="flex items-center justify-between min-h-[3.5rem] px-[clamp(1rem,4vw,2rem)] border-b border-border-soft">
+            <span className="font-mono font-semibold text-text"><span className="text-accent">&gt;_</span> console</span>
+            <button className={`${themeToggle} text-[1.1rem]`} type="button" onClick={() => setOpenFs(false)} aria-label="Close console">✕</button>
+          </div>
+          <div className="flex-1 min-h-0 p-3">
+            <Console fill />
+          </div>
+        </div>
+      )}
     </>
   );
 }
