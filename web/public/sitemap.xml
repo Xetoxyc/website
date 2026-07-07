@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://sittenauer.eu/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sittenauer.eu/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://sittenauer.eu/de"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sittenauer.eu/"/>
+    <loc>https://tobias.sittenauer.eu/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tobias.sittenauer.eu/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tobias.sittenauer.eu/de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tobias.sittenauer.eu/"/>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://sittenauer.eu/de</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sittenauer.eu/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://sittenauer.eu/de"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sittenauer.eu/"/>
+    <loc>https://tobias.sittenauer.eu/de</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tobias.sittenauer.eu/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tobias.sittenauer.eu/de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tobias.sittenauer.eu/"/>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://sittenauer.eu/cv</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sittenauer.eu/cv"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://sittenauer.eu/de/cv"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sittenauer.eu/cv"/>
+    <loc>https://tobias.sittenauer.eu/cv</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tobias.sittenauer.eu/cv"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tobias.sittenauer.eu/de/cv"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tobias.sittenauer.eu/cv"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sittenauer.eu/de/cv</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sittenauer.eu/cv"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://sittenauer.eu/de/cv"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sittenauer.eu/cv"/>
+    <loc>https://tobias.sittenauer.eu/de/cv</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tobias.sittenauer.eu/cv"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tobias.sittenauer.eu/de/cv"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tobias.sittenauer.eu/cv"/>
     <priority>0.8</priority>
   </url>
 </urlset>

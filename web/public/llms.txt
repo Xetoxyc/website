@@ -8,10 +8,10 @@ This site is a static React + Vite portfolio and CV. There is no tracking and no
 
 ## Pages
 
-- [Home (English)](https://sittenauer.eu/): Portfolio, skills, and projects.
-- [Home (German)](https://sittenauer.eu/de): German version of the portfolio.
-- [CV (English)](https://sittenauer.eu/cv): Curriculum vitae.
-- [CV (German)](https://sittenauer.eu/de/cv): Lebenslauf.
+- [Home (English)](https://tobias.sittenauer.eu/): Portfolio, skills, and projects.
+- [Home (German)](https://tobias.sittenauer.eu/de): German version of the portfolio.
+- [CV (English)](https://tobias.sittenauer.eu/cv): Curriculum vitae.
+- [CV (German)](https://tobias.sittenauer.eu/de/cv): Lebenslauf.
 
 ## Projects
 
@@ -29,5 +29,5 @@ This site is a static React + Vite portfolio and CV. There is no tracking and no
 
 ## Optional
 
-- [Imprint](https://sittenauer.eu/imprint): Legal notice (§ 5 DDG).
-- [Privacy](https://sittenauer.eu/privacy): Privacy policy (GDPR).
+- [Imprint](https://tobias.sittenauer.eu/imprint): Legal notice (§ 5 DDG).
+- [Privacy](https://tobias.sittenauer.eu/privacy): Privacy policy (GDPR).

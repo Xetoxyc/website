@@ -1,6 +1,6 @@
 import { Head } from "vite-react-ssg";
 
-const SITE = "https://sittenauer.eu";
+const SITE = "https://tobias.sittenauer.eu";
 const OG_IMAGE = SITE + "/og.svg";
 
 const PERSON_LD = {
