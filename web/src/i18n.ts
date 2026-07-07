@@ -35,7 +35,7 @@ export const T: Record<string, Entry> = {
   "fact.honorary.k": { en: "honorary", de: "Ehrenamt" },
   "fact.honorary.v": { en: "IHK examiner", de: "IHK-Prüfer" },
   "fact.focus.k": { en: "focus", de: "Fokus" },
-  "fact.focus.v": { en: "EU-sovereign, GDPR-native software", de: "EU-souveräne, DSGVO-native Software" },
+  "fact.focus.v": { en: "EU-sovereign, GDPR-native software that delivers real value", de: "EU-souveräne, DSGVO-native Software mit echtem Mehrwert" },
 
   // Skills
   "skills.h": { en: "Skills and stack", de: "Skills und Stack" },
