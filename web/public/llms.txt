@@ -1,0 +1,33 @@
+# Tobias Sittenauer
+
+> Full-stack TypeScript developer and fractional CTO based in Weihmichl, Lower Bavaria, Germany. Builds EU-sovereign, GDPR-native software. Founder of StackForge and an active open source maintainer.
+
+Tobias Sittenauer is a technology leader and hands-on software architect focused on scalable backend architectures, cloud infrastructure, and high-quality engineering. Core stack: TypeScript, Node.js, NestJS, PostgreSQL, Redis, Next.js, React, React Native, Kubernetes, Docker, and Linux self-hosting. An AI engineer from the first hour, he integrated AI into his workflow with the very first public version of GPT and has worked with it ever since.
+
+This site is a static React + Vite portfolio and CV. There is no tracking and no analytics.
+
+## Pages
+
+- [Home (English)](https://sittenauer.eu/): Portfolio, skills, and projects.
+- [Home (German)](https://sittenauer.eu/de): German version of the portfolio.
+- [CV (English)](https://sittenauer.eu/cv): Curriculum vitae.
+- [CV (German)](https://sittenauer.eu/de/cv): Lebenslauf.
+
+## Projects
+
+- [StackForge](https://stack-forge.eu): EU-sovereign software company.
+- [StackManagement](https://stack.management): Coming soon.
+- [Pastely](https://pastely.eu): SaaS.
+- [Entrivia](https://entrivia.eu): SaaS.
+- [@stackforge-eu/factur-x](https://github.com/stackforge-eu/factur-x): Open source TypeScript library for e-invoicing (EUPL-1.2).
+
+## Contact
+
+- Email: tobias@sittenauer.eu
+- GitHub: https://github.com/Xetoxyc
+- LinkedIn: https://www.linkedin.com/in/tobias-sittenauer
+
+## Optional
+
+- [Imprint](https://sittenauer.eu/imprint): Legal notice (§ 5 DDG).
+- [Privacy](https://sittenauer.eu/privacy): Privacy policy (GDPR).

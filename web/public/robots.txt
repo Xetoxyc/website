@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 # No tracking, no crawl traps. Static site.
+
+Sitemap: https://sittenauer.eu/sitemap.xml
