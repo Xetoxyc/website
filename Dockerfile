@@ -4,9 +4,10 @@
 # --- Stage 1: build the static site ---
 FROM node:22-alpine AS build
 WORKDIR /app
-COPY web/package.json web/package-lock.json ./
-RUN npm ci
-COPY web/ ./
+COPY package.json package-lock.json ./
+# --ignore-scripts: skips the husky `prepare` hook (no .git in the image)
+RUN npm ci --ignore-scripts
+COPY . ./
 RUN npm run build
 
 # --- Stage 2: static server ---
