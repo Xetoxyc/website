@@ -8,7 +8,7 @@ import { wrap, btn, btnPrimary, Badge, Tag, SectionHead } from "../ui";
 type TagT = string | { i18n: string };
 const SKILLS: { k: string; tags: TagT[] }[] = [
   { k: "skills.g.core", tags: ["TypeScript", "Node.js", "JavaScript", "C# (.NET)", "Java"] },
-  { k: "skills.g.backend", tags: ["NestJS", "PostgreSQL", "Redis", "REST and queues"] },
+  { k: "skills.g.backend", tags: ["NestJS", "PostgreSQL", "Redis", "GraphQL", "REST and queues"] },
   { k: "skills.g.frontend", tags: ["Next.js", "React", "React Native (Expo / EAS)"] },
   { k: "skills.g.infra", tags: ["Kubernetes", "Caddy", "Docker", "Linux self-hosting"] },
   { k: "skills.g.ai", tags: ["Prompt engineering", "AI engineering", "Local AI inference", "vLLM", "AMD ROCm"] },

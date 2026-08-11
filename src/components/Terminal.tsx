@@ -8,7 +8,7 @@ const errc = "text-[#ff6b6b]";
 
 const TEXT: Record<string, string> = {
   "role.txt": "founder, stackforge (independent practice)\nfractional & interim cto, dach",
-  "stack.txt": "typescript · nestjs · next.js · react native\npostgresql · redis · ai engineering · spec-driven dev",
+  "stack.txt": "typescript · nestjs · next.js · react native\npostgresql · redis · graphql · ai engineering · spec-driven dev",
   "focus.txt": "eu digital sovereignty · gdpr by default",
   "status": "region:   eu (de)\ntracking: none\nfonts:    self-hosted\nlicense:  open source",
   "cv.md": "the full cv lives at /cv (with a download button).",
