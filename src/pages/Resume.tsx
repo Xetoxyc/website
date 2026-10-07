@@ -1,10 +1,11 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import type { Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Layout } from "../components/Layout";
 import { Seo } from "../seo";
-import { wrap } from "../ui";
+import { wrap, btn, btnPrimary } from "../ui";
 import type { Lang } from "../i18n";
 import cvEn from "../content/resume.en.md?raw";
 import cvDe from "../content/resume.de.md?raw";
@@ -37,6 +38,29 @@ const md: Components = {
   td: ({ node, ...p }) => <td className="text-left px-3 py-2 border-b border-border-soft align-top text-text-soft" {...p} />,
 };
 
+// Builds the PDF on demand in the browser; the renderer is only loaded on first click.
+function PdfButton({ source, lang }: { source: string; lang: Lang }) {
+  const [busy, setBusy] = useState(false);
+  async function download() {
+    setBusy(true);
+    try {
+      const [{ pdf }, { ResumePdf }] = await Promise.all([import("@react-pdf/renderer"), import("../pdf/ResumePdf")]);
+      const blob = await pdf(<ResumePdf source={source} lang={lang} />).toBlob();
+      const url = URL.createObjectURL(blob);
+      const a = Object.assign(document.createElement("a"), { href: url, download: `tobias-sittenauer-${lang === "de" ? "lebenslauf" : "cv"}.pdf` });
+      a.click();
+      URL.revokeObjectURL(url);
+    } finally {
+      setBusy(false);
+    }
+  }
+  return (
+    <button type="button" className={btnPrimary} onClick={download} disabled={busy} aria-busy={busy}>
+      {busy ? (lang === "de" ? "PDF wird erstellt…" : "Building PDF…") : lang === "de" ? "PDF herunterladen" : "Download PDF"}
+    </button>
+  );
+}
+
 export default function Resume({ lang }: { lang: Lang }) {
   const source = lang === "de" ? cvDe : cvEn;
   const mdHref = lang === "de" ? "/resume.de.md" : "/resume.en.md";
@@ -59,9 +83,12 @@ export default function Resume({ lang }: { lang: Lang }) {
           <Link className="font-mono text-[0.88rem] text-accent" to={lang === "de" ? "/de" : "/"}>
             {lang === "de" ? "← zurück zur Startseite" : "← back to home"}
           </Link>
-          <a className="btn" href={mdHref} download>
-            {lang === "de" ? "Markdown herunterladen" : "Download markdown"}
-          </a>
+          <div className="flex flex-wrap gap-2">
+            <PdfButton source={source} lang={lang} />
+            <a className={btn} href={mdHref} download>
+              {lang === "de" ? "Markdown herunterladen" : "Download markdown"}
+            </a>
+          </div>
         </div>
         <article className="bg-bg-card border border-border rounded-xl p-[clamp(1.25rem,4vw,2.75rem)]">
           <ReactMarkdown remarkPlugins={[remarkGfm]} components={md}>
