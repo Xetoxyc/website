@@ -33,7 +33,7 @@ Dingolfing, Deutschland
 ### Software- & Plattformarchitektur
 - Architektur und Design einer Multi‑Tenant‑SaaS‑Plattform für Pflegemanagement
 - Entwicklung komplexer Enterprise‑Software für Pflegeorganisationen einschließlich Verwaltungs‑ und Abrechnungsprozessen
-- Entwicklung einer integrierten Web- und Mobile‑Plattform mit React Native
+- Entwicklung einer integrierten Web- und Mobile‑Plattform (React, React Native) auf einem gemeinsamen NestJS‑Backend mit Echtzeit‑Kommunikation und asynchroner Job‑Verarbeitung
 - Migration von frühen Produktprototypen zu stabilen produktiven Enterprise‑Systemen
 - Architektur‑Reviews, technische Entscheidungsfindung und Sicherstellung von Engineering‑Qualitätsstandards
 
@@ -64,7 +64,7 @@ Weihmichl, Deutschland
 ---
 
 ## Voltane GbR, Geschäftsführer
-**Jun 2021 – Heute**  
+**Jun 2021 – Jul 2026**  
 Landkreis Landshut, Deutschland
 
 ### Webentwicklung & Individualsoftware
@@ -158,7 +158,7 @@ Kernfunktionen:
 - React / Next.js
 - React Native
 - Backend‑Systeme
-- API‑Design
+- API‑Design (REST, GraphQL)
 
 ---
 

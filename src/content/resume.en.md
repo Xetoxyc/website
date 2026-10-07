@@ -33,7 +33,7 @@ Dingolfing, Germany
 ### Software & Platform Architecture
 - Architecture and design of a multi-tenant SaaS platform for care management
 - Design of complex enterprise software for healthcare organizations including administration and billing workflows
-- Development of an integrated web and mobile platform using React Native
+- Development of an integrated web and mobile platform (React, React Native) on a shared NestJS backend with real-time communication and asynchronous job processing
 - Migration from early product prototypes to production-ready enterprise systems
 - Architecture reviews, technical decision-making, and enforcement of engineering quality standards
 
@@ -64,7 +64,7 @@ Weihmichl, Germany
 ---
 
 ## Voltane GbR, Managing Director
-**Jun 2021 – Present**  
+**Jun 2021 – Jul 2026**  
 Landshut Region, Germany
 
 ### Web Development & Custom Software
@@ -159,7 +159,7 @@ Key features:
 - React / Next.js
 - React Native
 - Backend Systems
-- API Design
+- API Design (REST, GraphQL)
 
 ---
 
