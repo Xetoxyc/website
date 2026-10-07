@@ -28,6 +28,12 @@ const MORE: Project[] = [
   { name: "Gothic 1 Remake, Lockpicker", oss: true, p: "proj.lockpick.p", meta: "proj.lockpick.meta", links: [{ href: "https://github.com/Xetoxyc/gothic-remake-lockpicker", label: "GitHub ↗" }, { href: "https://xetoxyc.github.io/gothic-remake-lockpicker/", label: "Live ↗" }] },
 ];
 const FACTS = ["location", "company", "available", "honorary", "focus"];
+// Rendered as 03. "Setup": label is i18n, value is shared across languages.
+const SETUP: { k: string; v: string }[] = [
+  { k: "setup.laptop", v: "MacBook Pro, M4, 48 GB" },
+  { k: "setup.inference", v: "2× AMD Radeon AI PRO R9700, ROCm, vLLM, Qwen3" },
+  { k: "setup.agents", v: "Claude Code, Codex, Cursor, OpenCode" },
+];
 const ext = { rel: "noopener noreferrer external", target: "_blank" } as const;
 
 function ProjectCard({ lang, pr }: { lang: Lang; pr: Project }) {
@@ -157,10 +163,25 @@ export default function Home({ lang }: { lang: Lang }) {
           </div>
         </section>
 
+        {/* SETUP */}
+        <section id="setup" aria-labelledby="setup-h">
+          <div className={wrap}>
+            <SectionHead index="03." title={t(lang, "setup.h")} lead={t(lang, "setup.lead")} />
+            <ul className="grid gap-4 grid-cols-1 sm:grid-cols-3 list-none p-0">
+              {SETUP.map((s) => (
+                <li key={s.k} className="border border-border bg-bg-card rounded-lg p-4">
+                  <div className="font-mono text-[0.82rem] lowercase tracking-[0.02em] text-text-mute mb-1">{t(lang, `${s.k}.k`)}</div>
+                  <div className="text-text font-medium">{s.v}</div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
         {/* PROJECTS */}
         <section id="projects" aria-labelledby="projects-h">
           <div className={wrap}>
-            <SectionHead index="03." title={t(lang, "projects.h")} lead={t(lang, "projects.lead")} />
+            <SectionHead index="04." title={t(lang, "projects.h")} lead={t(lang, "projects.lead")} />
             <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
               {MAIN.map((pr) => <ProjectCard key={pr.name} lang={lang} pr={pr} />)}
             </div>
@@ -180,7 +201,7 @@ export default function Home({ lang }: { lang: Lang }) {
         {/* SERVICES */}
         <section id="services" aria-labelledby="services-h">
           <div className={wrap}>
-            <SectionHead index="04." title={t(lang, "services.h")} lead={t(lang, "services.lead")} />
+            <SectionHead index="05." title={t(lang, "services.h")} lead={t(lang, "services.lead")} />
             <div className="grid gap-4 grid-cols-1 min-[44rem]:grid-cols-2">
               {[1, 2, 3, 4].map((n) => (
                 <div key={n} className="bg-bg-card border border-border rounded-xl p-5 flex gap-3">
@@ -203,7 +224,7 @@ export default function Home({ lang }: { lang: Lang }) {
         {/* CONTACT */}
         <section id="contact" aria-labelledby="contact-h">
           <div className={wrap}>
-            <SectionHead index="05." title={t(lang, "contact.h")} lead={t(lang, "contact.lead")} />
+            <SectionHead index="06." title={t(lang, "contact.h")} lead={t(lang, "contact.lead")} />
             <ul className="list-none p-0 grid gap-3 font-mono text-[0.95rem]">
               <li className="flex gap-3 items-baseline"><span className="text-text-mute min-w-[6rem]">email</span><a className="text-accent hover:underline" href="mailto:tobias@sittenauer.eu">tobias@sittenauer.eu</a></li>
               <li className="flex gap-3 items-baseline"><span className="text-text-mute min-w-[6rem]">github</span><a className="text-accent hover:underline" href="https://github.com/xetoxyc" {...ext}>github.com/xetoxyc</a></li>

@@ -50,6 +50,11 @@ export const T: Record<string, Entry> = {
   "skills.g.ai": { en: "ai and inference", de: "KI und Inferenz" },
   "skills.g.standards": { en: "standards and compliance", de: "Standards und Compliance" },
   "skills.tag.gdpr": { en: "GDPR", de: "DSGVO" },
+  "setup.h": { en: "Setup", de: "Setup" },
+  "setup.lead": { en: "What I work with day to day.", de: "Womit ich täglich arbeite." },
+  "setup.laptop.k": { en: "laptop", de: "Laptop" },
+  "setup.inference.k": { en: "local inference", de: "Lokale Inferenz" },
+  "setup.agents.k": { en: "coding agents", de: "Coding-Agents" },
 
   // Projects
   "projects.h": { en: "Projects", de: "Projekte" },
