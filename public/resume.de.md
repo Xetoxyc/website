@@ -4,7 +4,8 @@
 **E-Mail:** tobias@sittenauer.eu  
 **Telefon:** +49 151 44238412  
 **Standort:** Weihmichl, Deutschland  
-**LinkedIn:** https://www.linkedin.com/in/tobias-sittenauer
+**LinkedIn:** https://www.linkedin.com/in/tobias-sittenauer  
+**Website:** [tobias.sittenauer.eu](https://tobias.sittenauer.eu)
 
 ---
 
@@ -155,9 +156,10 @@ Kernfunktionen:
 
 **Softwareentwicklung**
 - Full‑Stack‑Entwicklung
-- React / Next.js
-- React Native
-- Backend‑Systeme
+- React
+- Next.js (SSR, Fullstack)
+- React Native (Expo)
+- Backend‑Systeme (NestJS)
 - API‑Design (REST, GraphQL)
 
 ---
