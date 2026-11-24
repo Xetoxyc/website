@@ -18,8 +18,8 @@ and recruiters.
   7, react-router at 6, plugin-react at 5**; everything else (React 19, TS 6,
   Tailwind 4.3) is current. Do not bump those three until vite-react-ssg supports
   Vite 8 / react-router 7.
-- Served by nginx in a Docker image (`Dockerfile` builds the site, serves `dist`),
-  deployed to Kubernetes. `nginx.conf`: pretty URLs, gzip, CSP + security headers,
+- Served by Caddy in a Docker image (`Dockerfile` builds the site, serves `dist`),
+  deployed to Kubernetes. `Caddyfile`: pretty URLs, compression, CSP + security headers,
   `/healthz`.
 - No external requests at runtime: no Google Fonts, no analytics, no trackers.
   System font stack.
@@ -32,7 +32,7 @@ npm run dev       # vite dev server
 npm run build     # vite-react-ssg → dist (static)
 npm run preview   # serve the build
 # production image:
-docker build -t portfolio . && docker run --rm -p 8080:5000 portfolio  # nginx listens on 5000
+docker build -t portfolio . && docker run --rm -p 8080:5000 portfolio  # Caddy listens on 5000
 ```
 
 ## Content style rules

@@ -1,0 +1,41 @@
+# Static file server for the portfolio: pretty URLs, compression, security headers.
+# Plain HTTP on port 5000; TLS (and HSTS) belong to the Kubernetes ingress in front.
+{
+	admin off
+	auto_https off
+	persist_config off
+}
+
+:5000 {
+	root * /srv
+	encode zstd gzip
+
+	# CSP is strict: the site loads no third-party resources. 'unsafe-inline' covers the
+	# small inline scripts (theme toggle, footer year, CV loader, JSON-LD) and style attributes.
+	# Only plain sets here: a deleted or `?` field defers the block, and deferred headers are
+	# dropped from error responses such as 404s.
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		X-Frame-Options DENY
+		Permissions-Policy "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+		Content-Security-Policy "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+	}
+
+	# Scripts, styles and images may be cached for 30 days. Everything else (HTML, the SSG
+	# loader data) must be revalidated: it references fingerprinted assets that disappear on
+	# the next deploy, and a heuristically cached page would 404 on the old bundle and never
+	# hydrate (typing works, Enter does nothing). `route` keeps the two in this order.
+	@static path *.css *.js *.svg *.woff2 *.png *.jpg *.jpeg *.ico
+	route {
+		header Cache-Control no-cache
+		header @static Cache-Control "public, max-age=2592000"
+	}
+
+	# Kubernetes liveness/readiness probe target.
+	respond /healthz "ok" 200
+
+	# Pretty URLs: /cv -> cv.html, /de/cv -> de/cv.html.
+	try_files {path} {path}.html {path}/
+	file_server
+}

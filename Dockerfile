@@ -1,4 +1,4 @@
-# Build the React + Vite SSG site, then serve the static output with nginx.
+# Build the React + Vite SSG site, then serve the static output with Caddy.
 # Stateless and runtime-free (no Node server), suitable for Kubernetes.
 
 # --- Stage 1: build the static site ---
@@ -11,8 +11,10 @@ COPY . ./
 RUN npm run build
 
 # --- Stage 2: static server ---
-FROM nginx:1.27-alpine
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=build /app/dist /usr/share/nginx/html
+# Caddy as a non-root user on port 5000; the Caddyfile says how.
+FROM caddy:2.11-alpine
+COPY Caddyfile /etc/caddy/Caddyfile
+COPY --from=build /app/dist /srv
+USER nobody
 EXPOSE 5000
-# nginx:alpine runs `nginx -g 'daemon off;'` by default.
+CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
