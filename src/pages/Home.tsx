@@ -17,15 +17,17 @@ const SKILLS: { k: string; tags: TagT[] }[] = [
 
 type Project = { name: string; oss?: boolean; badge?: string; badgeKey?: string; p: string; meta: string; links: { href: string; label: string }[] };
 const MAIN: Project[] = [
-  { name: "@stackforge-eu/factur-x", oss: true, p: "proj.facturx.p", meta: "proj.facturx.meta", links: [{ href: "https://github.com/stackforge-eu/factur-x", label: "GitHub ↗" }] },
+  { name: "@stackforge-eu/factur-x", oss: true, p: "proj.facturx.p", meta: "proj.facturx.meta", links: [{ href: "https://factur-x.deployo.eu", label: "Website ↗" }, { href: "https://github.com/stackforge-eu/factur-x", label: "GitHub ↗" }] },
   { name: "Pastely", badge: "SaaS", p: "proj.pastely.p", meta: "proj.pastely.meta", links: [{ href: "https://pastely.eu", label: "pastely.eu ↗" }] },
-  { name: "StackManagement", badgeKey: "proj.stackmgmt.badge", p: "proj.stackmgmt.p", meta: "proj.stackmgmt.meta", links: [{ href: "https://stack.management", label: "stack.management ↗" }] },
+  { name: "Entrivia", oss: true, p: "proj.entrivia.p", meta: "proj.entrivia.meta", links: [{ href: "https://entrivia.eu", label: "entrivia.eu ↗" }, { href: "https://github.com/Entrivia-EU/entrivia", label: "GitHub ↗" }] },
+  { name: "Magnetite", oss: true, p: "proj.magnetite.p", meta: "proj.magnetite.meta", links: [{ href: "https://magnetitebrowser.org", label: "magnetitebrowser.org ↗" }, { href: "https://github.com/magnetite-browser/magnetite", label: "GitHub ↗" }] },
+  { name: "Grimgrid", badge: "iOS", p: "proj.grimgrid.p", meta: "proj.grimgrid.meta", links: [{ href: "https://www.grimgrid.eu", label: "grimgrid.eu ↗" }] },
   { name: "StackForge", badgeKey: "proj.stackforge.badge", p: "proj.stackforge.p", meta: "proj.stackforge.meta", links: [{ href: "https://stack-forge.eu", label: "stack-forge.eu ↗" }] },
 ];
 const MORE: Project[] = [
-  { name: "Entrivia", badge: "SaaS", p: "proj.entrivia.p", meta: "proj.entrivia.meta", links: [{ href: "https://entrivia.eu", label: "entrivia.eu ↗" }] },
-  { name: "Gothic 1 Remake, Savegame editor", oss: true, p: "proj.savegame.p", meta: "proj.savegame.meta", links: [{ href: "https://github.com/Xetoxyc/gothic-remake-savegame-editor", label: "GitHub ↗" }, { href: "https://gothic-remake-save-editor.deployo.eu/", label: "Live ↗" }] },
-  { name: "Gothic 1 Remake, Lockpicker", oss: true, p: "proj.lockpick.p", meta: "proj.lockpick.meta", links: [{ href: "https://github.com/Xetoxyc/gothic-remake-lockpicker", label: "GitHub ↗" }, { href: "https://xetoxyc.github.io/gothic-remake-lockpicker/", label: "Live ↗" }] },
+  { name: "StackManagement", badgeKey: "proj.stackmgmt.badge", p: "proj.stackmgmt.p", meta: "proj.stackmgmt.meta", links: [{ href: "https://stack.management", label: "stack.management ↗" }] },
+  { name: "Gothic 1 Remake, Savegame editor", oss: true, p: "proj.savegame.p", meta: "proj.savegame.meta", links: [{ href: "https://gothic-remake-save-editor.deployo.eu/", label: "Website ↗" }, { href: "https://github.com/Xetoxyc/gothic-remake-savegame-editor", label: "GitHub ↗" }] },
+  { name: "Gothic 1 Remake, Lockpicker", oss: true, p: "proj.lockpick.p", meta: "proj.lockpick.meta", links: [{ href: "https://xetoxyc.github.io/gothic-remake-lockpicker/", label: "Website ↗" }, { href: "https://github.com/Xetoxyc/gothic-remake-lockpicker", label: "GitHub ↗" }] },
 ];
 const FACTS = ["location", "company", "available", "honorary", "focus"];
 // Rendered as 03. "Setup": label is i18n, value is shared across languages.

@@ -18,8 +18,10 @@ This site is a static React + Vite portfolio and CV. There is no tracking and no
 - [StackForge](https://stack-forge.eu): EU-sovereign software company.
 - [StackManagement](https://stack.management): Coming soon.
 - [Pastely](https://pastely.eu): SaaS.
-- [Entrivia](https://entrivia.eu): SaaS.
-- [@stackforge-eu/factur-x](https://github.com/stackforge-eu/factur-x): Open source TypeScript library for e-invoicing (EUPL-1.2).
+- [Entrivia](https://entrivia.eu): Open source visitor management, self-hosted or EU-hosted (EUPL-1.2).
+- [Magnetite](https://magnetitebrowser.org): Open source browser built around a sidebar, no telemetry (EUPL-1.2).
+- [Grimgrid](https://www.grimgrid.eu): Battle map app for game masters on iPhone and iPad.
+- [@stackforge-eu/factur-x](https://factur-x.deployo.eu): Open source TypeScript library for e-invoicing (EUPL-1.2).
 
 ## Contact
 

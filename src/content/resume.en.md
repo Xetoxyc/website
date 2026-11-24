@@ -58,9 +58,11 @@ Weihmichl, Germany
 
 ### EU-sovereign products and open source
 - Founder of StackForge, building EU-sovereign, GDPR-native software products and open source.
-- @stackforge-eu/factur-x: open source TypeScript library for Factur-X, ZUGFeRD, and XRechnung e-invoicing (EUPL-1.2).
+- @stackforge-eu/factur-x (factur-x.deployo.eu): open source TypeScript library for Factur-X, ZUGFeRD, and XRechnung e-invoicing (EUPL-1.2).
+- Magnetite (magnetitebrowser.org): open source browser built around a sidebar, on Chromium, with end-to-end encrypted sync and no telemetry (EUPL-1.2).
 - Pastely (pastely.eu): EU-hosted link-in-bio, short link, and digital business card platform.
-- Entrivia (entrivia.eu): visitor management for the DACH market with NIS-2 and ISO 27001 positioning.
+- Entrivia (entrivia.eu): open source visitor management on ASP.NET Core with a hash-chained audit trail, self-hosted or EU-hosted (EUPL-1.2).
+- Grimgrid (grimgrid.eu): battle map app for game masters on iPhone and iPad, with a true-to-scale grid and fog of war on a TV.
 
 ---
 

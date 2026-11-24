@@ -76,16 +76,26 @@ export const T: Record<string, Entry> = {
   },
   "proj.pastely.meta": { en: "product · EU-hosted", de: "Produkt · EU-gehostet" },
   "proj.entrivia.p": {
-    en: "Visitor management software for the DACH market, positioned around NIS-2 and ISO 27001 requirements for organisations that need auditable access and visitor records.",
-    de: "Besuchermanagement-Software für den DACH-Raum, positioniert rund um die Anforderungen von NIS-2 und ISO 27001 für Organisationen, die nachvollziehbare Zugangs- und Besucherdaten benötigen.",
+    en: "Visitor management for European companies: email invites, pre-registration on the phone, check-in at the desk or a lobby kiosk, NDA signing, and badge printing, with a tamper-evident audit trail behind every step. Self-host it or have it run in the EU. Licensed under EUPL-1.2.",
+    de: "Besuchermanagement für europäische Unternehmen: Einladung per E-Mail, Vorregistrierung auf dem Smartphone, Check-in am Empfang oder am Kiosk in der Lobby, NDA-Unterschrift und Badge-Druck, mit einem Audit-Trail hinter jedem Schritt, der Manipulationen sichtbar macht. Selbst hosten oder in der EU betreiben lassen. Lizenziert unter EUPL-1.2.",
   },
-  "proj.entrivia.meta": { en: "product · DACH · NIS-2 / ISO 27001", de: "Produkt · DACH · NIS-2 / ISO 27001" },
+  "proj.entrivia.meta": { en: "ASP.NET Core · EUPL-1.2 · visitor management", de: "ASP.NET Core · EUPL-1.2 · Besuchermanagement" },
   "proj.stackmgmt.badge": { en: "Company", de: "Unternehmen" },
   "proj.stackmgmt.p": {
     en: "EU-hosted, GDPR-native operating system for small German-speaking creators who are starting to earn from their reach. Bundles link-in-bio, an AI-sorted managed inbox, deal management, GoBD-compliant invoicing, secured payments, and Impressum protection in one platform.",
     de: "EU-gehostetes, DSGVO-natives Betriebssystem für kleine deutschsprachige Creator, die beginnen, mit ihrer Reichweite Geld zu verdienen. Bündelt Link-in-Bio, ein KI-vorsortiertes gemanagtes Postfach, Deal-Management, GoBD-konforme Rechnungsstellung, abgesicherte Zahlungen und Impressumsschutz in einer Plattform.",
   },
   "proj.stackmgmt.meta": { en: "creator platform · EU-hosted", de: "Creator-Plattform · EU-gehostet" },
+  "proj.magnetite.p": {
+    en: "Open source browser built around a sidebar: vertical tabs, spaces, split view, and tabs that archive themselves. Runs on Chromium, so websites and Chrome extensions work as usual. Optional end-to-end encrypted sync through a free or self-hosted server. No telemetry, no account.",
+    de: "Open-Source-Browser rund um eine Seitenleiste: vertikale Tabs, Spaces, Split View und Tabs, die sich selbst archivieren. Läuft auf Chromium, sodass Websites und Chrome-Erweiterungen wie gewohnt funktionieren. Optionaler Ende-zu-Ende-verschlüsselter Sync über einen kostenlosen oder selbst gehosteten Server. Keine Telemetrie, kein Konto.",
+  },
+  "proj.magnetite.meta": { en: "Rust · EUPL-1.2 · browser", de: "Rust · EUPL-1.2 · Browser" },
+  "proj.grimgrid.p": {
+    en: "Battle map app for game masters on iPhone and iPad. Plug the phone into a TV lying flat on the table and get a true-to-scale square or hex grid, fog of war you swipe away, and a bestiary of more than 200 creatures. No account, no server, no tracking.",
+    de: "Battle-Map-App für Spielleiter auf iPhone und iPad. Das iPhone an einen flach liegenden Fernseher anschließen und ein maßstabsgetreues Quadrat- oder Hexraster, Fog of War zum Wegwischen und ein Bestiarium mit über 200 Kreaturen nutzen. Kein Konto, kein Server, kein Tracking.",
+  },
+  "proj.grimgrid.meta": { en: "Swift · iPhone and iPad", de: "Swift · iPhone und iPad" },
   "proj.stackforge.badge": { en: "Company", de: "Unternehmen" },
   "proj.stackforge.p": {
     en: "Where my independent products and open source work live, focused on EU digital sovereignty and GDPR-compliant SaaS.",
